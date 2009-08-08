@@ -4310,3 +4310,325 @@ Rendered tasks/_task (2.2ms)
 Rendered tasks/_task (2.2ms)
 Rendered tasks/_task (2.1ms)
 Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/tasks]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#index (for 127.0.0.1 at 2009-08-08 14:54:51) [GET]
+  [4;35;1mTask Load (0.7ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering template within layouts/tasks
+Rendering tasks/index
+  [4;36;1mTask Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Rendered tasks/_task (49.3ms)
+Rendered tasks/_task (2.3ms)
+Rendered tasks/_task (2.3ms)
+Rendered tasks/_task (2.1ms)
+Completed in 102ms (View: 93, DB: 2) | 200 OK [http://localhost/tasks]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_up (for 127.0.0.1 at 2009-08-08 14:54:55) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"2"}
+  [4;36;1mTask Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 2) [0m
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.5ms)[0m   [0;1mUPDATE `tasks` SET `order` = 3, `updated_at` = '2009-08-08 18:54:55' WHERE `id` = 2[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 4, `updated_at` = '2009-08-08 18:54:55' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering tasks/move_up
+Completed in 131ms (View: 10, DB: 9) | 200 OK [http://localhost/tasks/move_up/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#index (for 127.0.0.1 at 2009-08-08 14:54:59) [GET]
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering template within layouts/tasks
+Rendering tasks/index
+  [4;35;1mTask Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Rendered tasks/_task (7.2ms)
+Rendered tasks/_task (2.2ms)
+Rendered tasks/_task (2.2ms)
+Rendered tasks/_task (2.2ms)
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/tasks]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#index (for 127.0.0.1 at 2009-08-08 14:56:11) [GET]
+  [4;35;1mTask Load (0.2ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering template within layouts/tasks
+Rendering tasks/index
+  [4;36;1mTask Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Rendered tasks/_task (7.5ms)
+Rendered tasks/_task (2.2ms)
+Rendered tasks/_task (2.2ms)
+Rendered tasks/_task (2.2ms)
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://localhost/tasks]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_up (for 127.0.0.1 at 2009-08-08 14:56:14) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"2"}
+  [4;36;1mTask Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 2) [0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.3ms)[0m   [0;1mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 18:56:14' WHERE `id` = 2[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 3, `updated_at` = '2009-08-08 18:56:14' WHERE `id` = 3[0m
+  [4;36;1mSQL (12.3ms)[0m   [0;1mCOMMIT[0m
+Rendering tasks/move_up
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from _run_erb_app47views47tasks47_task46html46erb_locals_object_task at /home/aaron/Documents/rails/todolist/app/views/tasks/_task.html.erb:2)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from extract_options! at /usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.3/lib/active_support/core_ext/array/extract_options.rb:15)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in build_expiry at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:340)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from generated code (/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route.rb:160)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from polymorphic_url at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:74)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from extract_namespace at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:194)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from polymorphic_url at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:93)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from polymorphic_url at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:93)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in polymorphic_url at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:100)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in polymorphic_url at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:100)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from build_named_route_call at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:157)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from build_named_route_call at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:172)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from build_named_route_call at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/polymorphic_routes.rb:172)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from model_name_from_record_or_class at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/record_identifier.rb:101)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from model_name_from_record_or_class at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/record_identifier.rb:101)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from extract_options! at /usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.3/lib/active_support/core_ext/array/extract_options.rb:15)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in build_expiry at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:340)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from generated code (/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route.rb:160)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in build_expiry at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:340)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in generate at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:408)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from generated code (/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route.rb:160)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in build_expiry at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:340)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in generate at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:408)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from generated code (/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route.rb:160)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in build_expiry at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:340)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in generate at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:408)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from generated code (/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route.rb:160)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in build_expiry at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:340)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from block in generate at /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:408)
+DEPRECATION WARNING: @task will no longer be implicitly assigned to task. (called from generated code (/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.3/lib/action_controller/routing/route.rb:160)
+Rendered tasks/_task (13.9ms)
+Completed in 60ms (View: 24, DB: 23) | 200 OK [http://localhost/tasks/move_up/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#index (for 127.0.0.1 at 2009-08-08 15:05:33) [GET]
+  [4;36;1mTask Load (0.6ms)[0m   [0;1mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering template within layouts/tasks
+Rendering tasks/index
+  [4;35;1mTask Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+
+ActionView::TemplateError (undefined method `title' for #<Array:0xac063f4>) on line #2 of app/views/tasks/_task.html.erb:
+1: <li>
+2:   <%=h task.title %>
+3:   <%= link_to 'Edit', edit_task_path(task) %>
+4:   <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
+5:   <%= link_to_remote image_tag('uparrow.png'), { :url => { :action => 'move_up', :id => task } },
+
+    app/views/tasks/_task.html.erb:2
+    app/views/tasks/index.html.erb:4
+    app/controllers/tasks_controller.rb:7:in `index'
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (80.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#index (for 127.0.0.1 at 2009-08-08 15:05:45) [GET]
+  [4;35;1mTask Load (0.2ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering template within layouts/tasks
+Rendering tasks/index
+  [4;36;1mTask Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+Rendered tasks/_task (6.7ms)
+Rendered tasks/_task (1.2ms)
+Rendered tasks/_task (1.1ms)
+Rendered tasks/_task (1.1ms)
+Completed in 30ms (View: 21, DB: 2) | 200 OK [http://localhost/tasks]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_up (for 127.0.0.1 at 2009-08-08 15:05:49) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"3"}
+  [4;36;1mTask Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.2ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 3) [0m
+  [4;36;1mTask Load (0.2ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.2ms)[0m   [0;1mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:05:49' WHERE `id` = 3[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.1ms)[0m   [0mUPDATE `tasks` SET `order` = 3, `updated_at` = '2009-08-08 19:05:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Rendering tasks/move_up
+Completed in 17ms (View: 5, DB: 5) | 200 OK [http://localhost/tasks/move_up/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#index (for 127.0.0.1 at 2009-08-08 15:07:25) [GET]
+  [4;36;1mTask Load (0.5ms)[0m   [0;1mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering template within layouts/tasks
+Rendering tasks/index
+  [4;35;1mTask Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+Rendered tasks/_task (7.6ms)
+Rendered tasks/_task (2.2ms)
+Rendered tasks/_task (2.5ms)
+Rendered tasks/_task (2.4ms)
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/tasks]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_down (for 127.0.0.1 at 2009-08-08 15:07:27) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"3"}
+  [4;35;1mTask Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.4ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 3) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `tasks` [0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.3ms)[0m   [0;1mUPDATE `tasks` SET `order` = 3, `updated_at` = '2009-08-08 19:07:27' WHERE `id` = 3[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:27' WHERE `id` = 2[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (0.4ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_down
+Rendered tasks/_task (3.8ms)
+Rendered tasks/_task (1.5ms)
+Rendered tasks/_task (1.1ms)
+Rendered tasks/_task (1.1ms)
+Completed in 44ms (View: 19, DB: 10) | 200 OK [http://localhost/tasks/move_down/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_down (for 127.0.0.1 at 2009-08-08 15:07:35) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"1"}
+  [4;35;1mTask Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `tasks` [0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.3ms)[0m   [0;1mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:35' WHERE `id` = 1[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 1, `updated_at` = '2009-08-08 19:07:35' WHERE `id` = 2[0m
+  [4;36;1mSQL (11.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (0.4ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_down
+Rendered tasks/_task (3.0ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Completed in 45ms (View: 13, DB: 19) | 200 OK [http://localhost/tasks/move_down/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_down (for 127.0.0.1 at 2009-08-08 15:07:36) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"1"}
+  [4;35;1mTask Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `tasks` [0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 3) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.3ms)[0m   [0;1mUPDATE `tasks` SET `order` = 3, `updated_at` = '2009-08-08 19:07:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:36' WHERE `id` = 3[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (0.3ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_down
+Rendered tasks/_task (2.9ms)
+Rendered tasks/_task (2.2ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Completed in 38ms (View: 13, DB: 12) | 200 OK [http://localhost/tasks/move_down/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_up (for 127.0.0.1 at 2009-08-08 15:07:38) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"3"}
+  [4;35;1mTask Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 3) [0m
+  [4;35;1mTask Load (0.2ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 1, `updated_at` = '2009-08-08 19:07:38' WHERE `id` = 3[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.1ms)[0m   [0;1mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:38' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.2ms)[0m   [0;1mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_up
+Rendered tasks/_task (1.6ms)
+Rendered tasks/_task (1.1ms)
+Rendered tasks/_task (1.1ms)
+Rendered tasks/_task (1.0ms)
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://localhost/tasks/move_up/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_down (for 127.0.0.1 at 2009-08-08 15:07:38) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"3"}
+  [4;36;1mTask Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 3) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `tasks` [0m
+  [4;35;1mTask Load (0.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.3ms)[0m   [0mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:38' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.2ms)[0m   [0;1mUPDATE `tasks` SET `order` = 1, `updated_at` = '2009-08-08 19:07:38' WHERE `id` = 2[0m
+  [4;35;1mSQL (17.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.4ms)[0m   [0;1mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_down
+Rendered tasks/_task (3.0ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Completed in 48ms (View: 13, DB: 21) | 200 OK [http://localhost/tasks/move_down/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_up (for 127.0.0.1 at 2009-08-08 15:07:41) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"1"}
+  [4;36;1mTask Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `tasks`[0m
+  [4;35;1mTask Load (0.2ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 1) [0m
+  [4;36;1mTask Load (0.2ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.2ms)[0m   [0;1mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:41' WHERE `id` = 1[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.2ms)[0m   [0mUPDATE `tasks` SET `order` = 3, `updated_at` = '2009-08-08 19:07:41' WHERE `id` = 3[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTask Load (0.2ms)[0m   [0mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_up
+Rendered tasks/_task (1.6ms)
+Rendered tasks/_task (1.1ms)
+Rendered tasks/_task (1.1ms)
+Rendered tasks/_task (1.1ms)
+Completed in 29ms (View: 7, DB: 15) | 200 OK [http://localhost/tasks/move_up/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TasksController#move_up (for 127.0.0.1 at 2009-08-08 15:07:43) [POST]
+  Parameters: {"authenticity_token"=>"OxirEA1cgq8MdN0m2wkdFhLRGkq0AlfcfPhg+MaB/7M=", "id"=>"1"}
+  [4;35;1mTask Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `tasks`[0m
+  [4;36;1mTask Load (0.3ms)[0m   [0;1mSELECT * FROM `tasks` WHERE (`tasks`.`id` = 1) [0m
+  [4;35;1mTask Load (0.3ms)[0m   [0mSELECT * FROM `tasks` WHERE (`tasks`.`order` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTask Update (0.3ms)[0m   [0mUPDATE `tasks` SET `order` = 1, `updated_at` = '2009-08-08 19:07:43' WHERE `id` = 1[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTask Update (0.2ms)[0m   [0;1mUPDATE `tasks` SET `order` = 2, `updated_at` = '2009-08-08 19:07:43' WHERE `id` = 2[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTask Load (0.4ms)[0m   [0;1mSELECT * FROM `tasks` ORDER BY `order`[0m
+Rendering tasks/move_up
+Rendered tasks/_task (2.9ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Rendered tasks/_task (2.1ms)
+Completed in 33ms (View: 13, DB: 7) | 200 OK [http://localhost/tasks/move_up/1]

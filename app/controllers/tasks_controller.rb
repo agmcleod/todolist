@@ -69,9 +69,11 @@ class TasksController < ApplicationController
         @task.order = prevOrder
         respond_to do |format|
           if @task.save && prev.save
+            @tasks = Task.all(:order => '`order`')
             format.js if request.xhr?
             format.html { redirect_to_index('Task moved up successfully!', 1) }
           else
+            @tasks = Task.all(:order => '`order`')
             format.js if request.xhr
             format.html { redirect_to_index('Sorry, but the task could not be moved up.', 2) }
           end
@@ -94,9 +96,11 @@ class TasksController < ApplicationController
       @task.order = nextOrder
       respond_to do |format|
         if @task.save && nextTask.save
+          @tasks = Task.all(:order => '`order`')
           format.js if request.xhr?
           format.html { redirect_to_index('Task moved down successfully!', 1) }
         else
+          @tasks = Task.all(:order => '`order`')
           format.js if request.xhr?
           format.html { redirect_to_index('Sorry, but the task could not be moved down', 2) }
         end
