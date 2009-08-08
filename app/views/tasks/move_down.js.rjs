@@ -1,0 +1,2 @@
+page.replace_html("myTasks", :partial => "task", :object => @tasks)
+

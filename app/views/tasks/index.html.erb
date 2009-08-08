@@ -1,0 +1,10 @@
+<h1>Aaron's Todo List</h1>
+
+<ul id="myTasks">
+  <%= render :partial => "task", :collection => @tasks %>
+</ul>
+
+<br />
+
+<%= link_to 'Add a task', new_task_path %>
+

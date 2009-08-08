@@ -1,0 +1,10 @@
+<li>
+  <%=h task.title %>
+  <%= link_to 'Edit', edit_task_path(task) %>
+  <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
+  <%= link_to_remote image_tag('uparrow.png'), { :url => { :action => 'move_up', :id => task } },
+    { :href => url_for(:action => 'move_up', :id => task), :class => 'arrow' }  %>
+  <%= link_to_remote image_tag('downarrow.png'), { :url => { :action => 'move_down', :id => task } },
+    { :href => url_for(:action => 'move_down', :id => task), :class => 'arrow' }  %>
+</li>
+
